@@ -17,7 +17,7 @@
 }
 
 .card{
-  background-color: rgba(250, 244, 244, 0.759);
+  background-color: rgba(250, 244, 244, 0.827);
   width: 40%;
   height: 20%;
   display: flex;
@@ -25,6 +25,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 2rem;
+  box-shadow: 10px 10px rgba(89, 58, 58, 0.332);
 
 }
 
@@ -32,4 +33,75 @@
   display: flex;
   align-items: center;
   height: 600px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 50px;
+  width: 180px;
+  opacity: 1;
+  background-color: #73eeea98;
+  border: 1px solid rgba(41, 179, 147, 0.774);
+}
+
+
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+  
+/* .button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+} */
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+
+@media only screen and (max-width: 600px) {
+  .card {
+      width: 80%;
+      height: 30%;
+  }
 }

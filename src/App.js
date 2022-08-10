@@ -38,6 +38,9 @@ const {advice} = this.state;
       <div className="app">
         <div className="card">
           <h1>{advice}</h1>
+          <button className="button" onClick={this.fetchAdvice}>
+            <span>GIVE ME ADVICE!</span>
+          </button>
         </div>
       </div>
     )
