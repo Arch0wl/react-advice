@@ -9,10 +9,24 @@ class App extends React.Component{
 
 
   componentDidMount() {
-    console.log("COMPONENT DID MOUNT")
+    this.fetchAdvice();
 
   }
 
+  fetchAdvice = () => {
+    axios.get("https://api.adviceslip.com/advice")
+    .then((response) => {
+      console.log(response);
+
+    })
+    .catch((error)=> {
+      console.log(error)
+
+    })
+
+  }
+
+  // function declaration 
 
   render() {
     return (
